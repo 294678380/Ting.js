@@ -18,3 +18,5 @@
 		<p style="color:#666666;text-indent:10px;">使用es6类结构组织routes代码，使api更具可读性</p>
 	</li>
 </ul>
+
+<h2>使用步骤</h2>
