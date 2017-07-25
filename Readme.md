@@ -1,9 +1,9 @@
 <!--插入travis测试svg-->
 
 ting.js for 1.0.0  基于express的server工程化组件
-<embed src="rect.svg" width="88" height="20" 
-type="image/svg+xml"
-pluginspage="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" />
+
+<a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
+
 
 =================================== 
 你可以用它，工程化你的express项目。使项目变得更可靠
