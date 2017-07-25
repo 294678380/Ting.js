@@ -12,7 +12,7 @@
     "express": "^4.15.3"
    },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/mocha/bin/_mocha"
   },
   "keywords": [
     "express",
@@ -20,6 +20,9 @@
     "node_server",
     "mvc"
   ],
+  "engines": {
+    "node": ">= 6.10.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/294678380/Ting.js.git"
