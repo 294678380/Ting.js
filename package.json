@@ -5,19 +5,28 @@
   "main": "index.js",
   "dependencies": {
     "chai": "^4.1.0",
-    "express": "^4.15.3",
     "merge-descriptors": "1.0.1",
     "mocha": "^3.4.2"
   },
   "devDependencies": {
     "express": "^4.15.3"
-  },
+   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "/node_modules/.bin/mocha test"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "node_server",
+    "mvc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/294678380/Ting.js.git"
   },
   "author": {
     "name": "zhangtaifeng",
     "email": "294678380@qq.com"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
