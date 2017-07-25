@@ -17,10 +17,10 @@ var	writeOption = {
 
 var doc = module.exports = {};
 	doc.html = function(_doc,opt){
-		rwDoc(html_path,"doc.html",_doc,opt);
+		rwDoc(html_path,opt.version+"_doc.html",_doc,opt.doc);
 	}
 	doc.json = function(_doc,opt){
-		rwDoc(json_path,"doc.json",_doc,opt);
+		rwDoc(json_path,opt.version+"_doc.json",_doc,opt.doc);
 	}
 	/**
 		读取本地文件，替换文件中的{{json}}标志，生成文档
