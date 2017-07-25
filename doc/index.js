@@ -1,0 +1,44 @@
+var fs = require("fs");
+var path = require("path");
+
+var toString = Object.prototype.toString;
+var stringify = JSON.stringify;
+var html_path = path.join(__dirname,"./template/html/doc.html");
+var json_path = path.join(__dirname,"./template/json/doc.json");
+var	readOption = {
+	encoding:"utf-8",
+	flag:"r"
+} 
+var	writeOption = {
+	encoding:"utf-8",
+	flag:"w"
+} 
+
+
+var doc = module.exports = {};
+	doc.html = function(_doc,opt){
+		rwDoc(html_path,"doc.html",_doc,opt);
+	}
+	doc.json = function(_doc,opt){
+		rwDoc(json_path,"doc.json",_doc,opt);
+	}
+	/**
+		读取本地文件，替换文件中的{{json}}标志，生成文档
+		@param readpath {String} 读取文件路径
+		@param filename {String} 写入文件名称
+		@param _doc {Object} 写入文档对象
+		@param opt {Object} 文档配置
+	*/
+	function rwDoc(readpath,filename,_doc,opt){
+		let str = stringify(_doc);
+		var contentText = fs.readFileSync(readpath,readOption);
+		//替换j'son
+			contentText = contentText.replace(/\{\{json\}\}/,str);
+			//写入文件
+			var write_path = opt.path+filename;
+			fs.writeFile(write_path,contentText,writeOption,function(err){
+				if(err){
+					throw err;
+				}
+			})
+	}
