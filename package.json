@@ -12,7 +12,7 @@
     "express": "^4.15.3"
    },
   "scripts": {
-    "test": "node_modules/mocha/bin/_mocha"
+    "test": "node_modules/.bin/mocha"
   },
   "keywords": [
     "express",
