@@ -26,7 +26,7 @@ describe("plugin-doc from /doc/index.js",function(){
 		return doc.html(_doc,_opt,true)
 	}
 	it("这个插件用来生成文档，预制了测试方法，如果测试成功则返回正确的文件名，文件名由版本号和生成文件组成",function(){
-		expect(doc_test)
+		expect(doc_test())
 		.to.be.equal("1.0.0_doc.html");
 	});
 });
