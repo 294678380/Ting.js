@@ -19,7 +19,7 @@ var doc = module.exports = {};
 	doc.html = function(_doc,opt,test){
 		return rwDoc(html_path,opt.version+"_doc.html",_doc,opt.doc,test);
 	}
-	doc.json = function(_doc,opt){
+	doc.json = function(_doc,opt,test){
 		return rwDoc(json_path,opt.version+"_doc.json",_doc,opt.doc,test);
 	}
 	/**
