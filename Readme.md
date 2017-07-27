@@ -23,7 +23,29 @@ Step 3:　创建index.js<!-- /react-text -->
 <div class="code_view">
 <pre class=" line-numbers language-javascript">
 <code id="codeview_3" class=" language-javascript">
-		\r\n\t\tconst path = require(\"path\");\r\n\t\t//引入express\r\n\t\tconst express = require(\"express\");\r\n\t\t//express_app\r\n\t\tvar app = express();\r\n\t\tvar ting = require(\"ting.js\");\r\n\t\t//定义routes\r\n\t\tvar routes = require(\"./routes\");\r\n\t\t//引入_package\r\n\t\tvar _package = require(\"./package.json\");\r\n\t\t\t//doc路径\r\n\t\t\t_package.doc.path = path.join(__dirname,_package.doc.path);\r\n\t\t//初始化\r\n\t\tvar ting_fn = function(init){\r\n\t\t\tinit(routes);\r\n\t\t}\r\n\t\t//生成路由\r\n\t\tting(app,ting_fn,_package);\r\n\r\n\t\t//监听\r\n\t\tapp.listen(8090,()=>{\r\n\t\t\tconsole.log(\"ting_server started 8090\");\r\n\t\t});\r\n
+		const path = require("path");
+		//引入express
+		const express = require("express");
+		//express_app
+		var app = express();
+		var ting = require("ting.js");
+		//定义routes
+		var routes = require("./routes");
+		//引入_package
+		var _package = require("./package.json");
+			//doc路径
+			_package.doc.path = path.join(__dirname,_package.doc.path);
+		//初始化
+		var ting_fn = function(init){
+			init(routes);
+		}
+		//生成路由
+		ting(app,ting_fn,_package);
+
+		//监听
+		app.listen(8090,()=>{
+			console.log("ting_server started 8090");
+		});
 </code>
 </pre>
 </div></div>
@@ -31,8 +53,28 @@ Step 3:　创建index.js<!-- /react-text -->
 
 <pre class=" line-numbers language-javascript">
 <code id="codeview_4" class=" language-javascript">
-	
-	\r\n\t//处理类\r\n\tvar Home = require(\"./home.class\");\r\n\t//定义规则\r\n\tmodule.exports = [\r\n\t\t\t{\r\n\t\t\t\tbrie:\"首页\",\r\n\t\t\t\tdesc:\"这是首页的整体说明\",\r\n\t\t\t\tpath:\"/\",\r\n\t\t\t\tclass:Home,\r\n\t\t\t\trules:{\r\n\t\t\t\t\tget:[\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tbrie:\"这是首页的get访问方法\",\r\n\t\t\t\t\t\t\tdesc:\"返回了hello world\",\r\n\t\t\t\t\t\t\tpath:\"/\",\r\n\t\t\t\t\t\t\tExamination:true,\t//开启代码视图\r\n\t\t\t\t\t\t\tcontroller:[\"getHome\"]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t]\r\n
+	//处理类
+	var Home = require("./home.class");
+	//定义规则
+	module.exports = [
+			{
+				brie:"首页",
+				desc:"这是首页的整体说明",
+				path:"/",
+				class:Home,
+				rules:{   //对象
+					get:[	
+						{
+							brie:"这是首页的get访问方法",
+							desc:"返回了hello world",
+							path:"/",
+							Examination:true,	//开启代码视图
+							controller:["getHome"]
+						}
+					]
+				}
+			}
+	]
 
 </code>
 </pre>
@@ -40,8 +82,14 @@ Step 3:　创建index.js<!-- /react-text -->
 </div></div><div class="ta-content-path"><h3 id="jiaocheng步骤5"><!-- react-text: 404 -->Step 5:　创建home.class.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 408 -->替代复杂的router，使用类文件作为请求入口<!-- /react-text --><br></span></p><div class="code_view">
 <pre class=" line-numbers language-javascript">
 <code id="codeview_5" class=" language-javascript">
-\r\n\tclass Home{\r\n\t\tmain(){\r\n\t\t\t/**\r\n\t\t\t\tmain函数是每个类的入口函数， 它会在启动加载类时执行\r\n\t\t\t*/\r\n\t\t}\r\n\t\tgetHome(req,res,next){\r\n\t\t\tres.send(\"hello world\");\r\n\t\t}\r\n\t}\r\n\tmodule.exports = Home;\r\n
-
+class Home{
+		main(){
+		}
+		getHome(req,res,next){
+			res.send("hello world");
+		}
+	}
+	module.exports = Home;
 </code>
 </pre>
 </div></div>
