@@ -1,4 +1,4 @@
-ting.js for 1.1.8  基于express的server工程化组件
+ting.js for 1.1.10  基于express的server工程化组件
 ==============================
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
 <h2>你可以用它，工程化你的express项目。使项目变得更可靠</h2>
