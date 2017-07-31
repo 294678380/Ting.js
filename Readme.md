@@ -2,13 +2,16 @@ ting.js for 1.1.12 基于express的server工程化组件
 ==============================
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
 <h2>你可以用它，工程化你的express项目。使项目变得更可靠</h2>
-
-
 <p>
 	nodejs版本：
 	node >= 6.10.0
 </p>
-
+<div>
+	<p>访问主页</p>
+	<a href="http://www.tingjs.com">
+		<img width="100%" src="http://images.cnblogs.com/cnblogs_com/ztfjs/841508/o__2_JI@[S0Z6@[%7DNHNVPTHAV.png" alt="ting.js"/>
+	</a>
+</div>
 
 <div class="ta-right">
 <div><div id="jianshu" class="ta-title"><!-- react-text: 293 -->Ting.js简述<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></div><div class="ta-content"><div><!-- react-text: 297 -->Ting.js是一款基于express的server工程化组件，它的主要作用，在于简化express的较繁杂router操作，使nodejs的server端API变得更加友好。附加功能可以实时生成路由文档，使api请求一目了然，简洁代码的同时保持了express可扩展性能。<!-- /react-text --><br></div><div><h2 id="jianshu三大特性" style="color: rgb(255, 144, 0);">三大特性</h2><div class="ta-content-path"><h3 id="jianshu三大特性0"><!-- react-text: 303 -->1.简化express的路由<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 307 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jianshu三大特性1"><!-- react-text: 312 -->2.使用es6的class语法接受请求，使工程更易于移植<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 316 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jianshu三大特性2"><!-- react-text: 321 -->3.配置即文档，根据package的版本生成文档<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 325 --><!-- /react-text --><br></span></p><div></div></div></div></div></div><div><div id="jiaocheng" class="ta-title"><!-- react-text: 330 -->使用教程<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></div><div class="ta-content"><div><!-- react-text: 334 --><!-- /react-text --><br></div><div><h2 id="jiaocheng步骤" style="color: rgb(255, 144, 0);">步骤</h2><div class="ta-content-path"><h3 id="jiaocheng步骤0"><!-- react-text: 340 -->开始之前<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 344 -->在一切开始之前，你需要具备express知识,另外，需要生成一份package.json。<!-- /react-text --><br></span><span><!-- react-text: 347 -->准备就绪后,就开始吧！<!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jiaocheng步骤1"><!-- react-text: 352 -->
