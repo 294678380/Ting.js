@@ -8,7 +8,7 @@ ting.js for 1.1.12 基于express的server工程化组件
 </p>
 <div>
 	<p>访问主页</p>
-	<a href="http://www.tingjs.com">
+	<a href="http://www.tingjs.com" target="_blank">
 		<img width="100%" src="http://images.cnblogs.com/cnblogs_com/ztfjs/841508/o__2_JI@[S0Z6@[%7DNHNVPTHAV.png" alt="ting.js"/>
 	</a>
 </div>
