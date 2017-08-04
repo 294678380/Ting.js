@@ -36,8 +36,6 @@ Step 3:　创建index.js<!-- /react-text -->
 		var routes = require("./routes");
 		//引入_package
 		var _package = require("./package.json");
-			//doc路径
-			_package.doc.path = path.join(__dirname,_package.doc.path);
 		//初始化
 		var ting_fn = function(init){
 			init(routes);
