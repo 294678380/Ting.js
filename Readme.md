@@ -7,7 +7,7 @@ ting.js for 1.1.19 基于express的server工程化组件
 	node >= 6.10.0
 </p>
 <p>
-	使用ting.js的理由有几点，1.它的主要作用是优化express框架，使路由与controller解耦，根据代码生成对应的API文档。2.既然是优化express，它就没有丢掉express的所有东西，express的中间件、工具、基础逻辑等都没有改变。3.代码清晰，类方法替代router.get这样的调用方法，你可以使用继承等特性更好的组织代码
+	使用ting.js的理由有几点，1.它的主要作用是优化express框架，使路由与controller解耦，根据代码生成对应的API文档。2.既然是优化express，它就没有丢掉express的所有东西，express的中间件、工具、基础逻辑等都没有改变。3.代码清晰，类方法替代router.get这样的调用方法，你可以使用继承等特性更好的组织代码 4.它几乎没有代码包袱，源码简单
 </p>
 <div>
 	<a href="http://www.tingjs.top" target="_blank">
