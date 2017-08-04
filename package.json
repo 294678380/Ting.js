@@ -1,6 +1,6 @@
 {
   "name": "ting.js",
-  "version": "1.1.16",
+  "version": "1.1.19",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -30,7 +30,7 @@
     "type": "git",
     "url": "https://github.com/294678380/Ting.js.git"
   },
-  "homepage": "http://tingjs.top/",
+  "homepage": "http://www.tingjs.top/",
   "author": {
     "name": "zhangtaifeng",
     "email": "294678380@qq.com"
