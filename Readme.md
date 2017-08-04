@@ -1,4 +1,4 @@
-ting.js for 1.1.15 基于express的server工程化组件
+ting.js for 1.1.16 基于express的server工程化组件
 ==============================
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
 <h2>你可以用它，工程化你的express项目。使项目变得更可靠</h2>
@@ -64,18 +64,7 @@ Step 3:　创建index.js<!-- /react-text -->
 				brie:"首页",
 				desc:"这是首页的整体说明",
 				path:"/",
-				class:Home,
-				rules:{   //对象
-					get:[	
-						{
-							brie:"这是首页的get访问方法",
-							desc:"返回了hello world",
-							path:"/",
-							Examination:true,	//开启代码视图
-							controller:["getHome"]
-						}
-					]
-				}
+				class:Home
 			}
 	]
 
@@ -85,14 +74,26 @@ Step 3:　创建index.js<!-- /react-text -->
 </div></div><div class="ta-content-path"><h3 id="jiaocheng步骤5"><!-- react-text: 404 -->Step 5:　创建home.class.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 408 -->替代复杂的router，使用类文件作为请求入口<!-- /react-text --><br></span></p><div class="code_view">
 <pre class=" line-numbers language-javascript">
 <code id="codeview_5" class=" language-javascript">
+const rules = {   //对象
+	get:[	
+		{
+			brie:"这是首页的get访问方法",
+			desc:"返回了hello world",
+			path:"/",
+			Examination:true,	//开启代码视图
+			controller:["getHome"]
+		}
+	]
+}
 class Home{
-		main(){
-		}
-		getHome(req,res,next){
-			res.send("hello world");
-		}
+	main(){
 	}
-	module.exports = Home;
+	getHome(req,res,next){
+		res.send("hello world");
+	}
+}
+Home.rules = rules;
+module.exports = Home;
 </code>
 </pre>
 </div></div>
