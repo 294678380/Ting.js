@@ -1,6 +1,8 @@
 ting.js for 1.1.19 基于express的server工程化组件
 ==============================
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
+[！[BCH compliance]（https://bettercodehub.com/edge/badge/294678380/Ting.js?branch=master）]（https://bettercodehub.com/）
+
 <h2>你可以用它，工程化你的express项目。使项目变得更可靠</h2>
 <p>
 	nodejs版本：
