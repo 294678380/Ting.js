@@ -1,4 +1,4 @@
-ting.js for 1.1.19 基于express的server工程化组件
+ting.js for 1.1.20 基于express的server工程化组件
 ==============================
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
 <a><img src ='https://bettercodehub.com/edge/badge/294678380/Ting.js?branch=master'/></a>
