@@ -4,7 +4,7 @@ ting.js for 1.2.1
 
 <h2>你可以用它，工程化你的项目。使项目变得更可靠</h2>
 <p>
-	nodejs版本： node >= 6.10.0
+	nodejs版本： （express）node >= 6.10.0  ; （koa）node >= 6.10.0
 </p>
 <div class="ta-right">
 	<div>
