@@ -1,36 +1,81 @@
-ting.js for 1.1.22 基于express的server工程化组件
-==============================
+ting.js for 1.2.1
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
-<a><img src ='https://bettercodehub.com/edge/badge/294678380/Ting.js?branch=master'/></a>
+<a><img src='https://bettercodehub.com/edge/badge/294678380/Ting.js?branch=master' /></a>
 
-
-
-<h2>你可以用它，工程化你的express项目。使项目变得更可靠</h2>
+<h2>你可以用它，工程化你的项目。使项目变得更可靠</h2>
 <p>
-	nodejs版本：
-	node >= 6.10.0
+	nodejs版本： node >= 6.10.0
 </p>
-<p>
-	使用ting.js的理由有几点，1.它的主要作用是优化express框架，使路由与controller解耦，根据代码生成对应的API文档。2.既然是优化express，它就没有丢掉express的所有东西，express的中间件、工具、基础逻辑等都没有改变。3.代码清晰，类方法替代router.get这样的调用方法，你可以使用继承等特性更好的组织代码 4.它几乎没有代码包袱，源码简单
-</p>
-<div>
-	<a href="http://www.tingjs.top" target="_blank">
-		<img width="100%" src="http://images.cnblogs.com/cnblogs_com/ztfjs/841508/o__2_JI@[S0Z6@[%7DNHNVPTHAV.png" alt="ting.js"/>
-	</a>
-</div>
-
 <div class="ta-right">
-<div><div id="jianshu" class="ta-title"><!-- react-text: 293 -->Ting.js简述<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></div><div class="ta-content"><div><!-- react-text: 297 -->Ting.js是一款基于express的server工程化组件，它的主要作用，在于简化express的较繁杂router操作，使nodejs的server端API变得更加友好。附加功能可以实时生成路由文档，使api请求一目了然，简洁代码的同时保持了express可扩展性能。<!-- /react-text --><br></div><div><h2 id="jianshu三大特性" style="color: rgb(255, 144, 0);">三大特性</h2><div class="ta-content-path"><h3 id="jianshu三大特性0"><!-- react-text: 303 -->1.简化express的路由<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 307 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jianshu三大特性1"><!-- react-text: 312 -->2.使用es6的class语法接受请求，使工程更易于移植<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 316 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jianshu三大特性2"><!-- react-text: 321 -->3.配置即文档，根据package的版本生成文档<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 325 --><!-- /react-text --><br></span></p><div></div></div></div></div></div><div><div id="jiaocheng" class="ta-title"><!-- react-text: 330 -->使用教程<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></div><div class="ta-content"><div><!-- react-text: 334 --><!-- /react-text --><br></div><div><h2 id="jiaocheng步骤" style="color: rgb(255, 144, 0);">步骤</h2><div class="ta-content-path"><h3 id="jiaocheng步骤0"><!-- react-text: 340 -->开始之前<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 344 -->在一切开始之前，你需要具备express知识,另外，需要生成一份package.json。<!-- /react-text --><br></span><span><!-- react-text: 347 -->准备就绪后,就开始吧！<!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jiaocheng步骤1"><!-- react-text: 352 -->
+	<div>
+		<div id="jianshu" class="ta-title">
+		<div class="ta-content">
+			<h3>
+				简化的较繁杂router操作，使nodejs的server端API变得更加友好。可以实时生成路由文档，使api请求一目了然，简洁代码的同时保持了主框架功能。
+			</h3>
+			<div>
+				<h2 id="jianshu三大特性" style="color: rgb(255, 144, 0);">三特性</h2>
+				<div class="ta-content-path">
+					<h3 id="jianshu三大特性0">1.简化express的路由
+						<span style="color: rgb(255, 144, 0);"></span>
+					</h3>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jianshu三大特性1">
+						2.使用es6的class语法接受请求，使工程更易于移植
+					</h3>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jianshu三大特性2">
+						3.配置即文档，根据package的版本生成文档
+						<span style="color: rgb(255, 144, 0);"></span>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="jiaocheng" class="ta-title">
+			<!-- react-text: 330 -->使用教程
+			<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></div>
+		<div class="ta-content">
+			<div>
+				<!-- react-text: 334 -->
+				<!-- /react-text --><br></div>
+			<div>
+				<h2 id="jiaocheng步骤" style="color: rgb(255, 144, 0);">步骤</h2>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤0">
+					开始之前
+					<span style="color: rgb(255, 144, 0);"></span></h3>
+					<p>
+					<span>在一切开始之前，你需要具备express知识,另外，需要生成一份package.json。<br></span><span>准备就绪后,就开始吧！<br></span>
+					</p>
+					<div></div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤1"><!-- react-text: 352 -->
 Step 1:　下载express<!-- /react-text -->
-<span style="color: rgb(255, 144, 0);"></span></h3><p><span>
+<span style="color: rgb(255, 144, 0);"></span></h3>
+					<p><span>
 <!-- react-text: 356 -->你需要先下载express:<!-- /react-text --><br></span><span><!-- react-text: 359 -->项目目录打开命令行运行 npm install express --save<!-- /react-text --><br></span>
-<span><!-- react-text: 362 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jiaocheng步骤2"><!-- react-text: 367 -->Step 2:　下载ting.js<!-- /react-text -->
-<span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 371 -->你需要先下载express:<!-- /react-text --><br></span><span><!-- react-text: 374 -->项目目录打开命令行运行 npm install ting.js --save<!-- /react-text --><br></span><span><!-- react-text: 377 --><!-- /react-text --><br></span></p><div></div></div><div class="ta-content-path"><h3 id="jiaocheng步骤3"><!-- react-text: 382 -->
+						<span><!-- react-text: 362 --><!-- /react-text --><br></span></p>
+					<div></div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤2"><!-- react-text: 367 -->Step 2:　下载ting.js<!-- /react-text -->
+<span style="color: rgb(255, 144, 0);"></span></h3>
+					<p><span><!-- react-text: 371 -->你需要先下载express:<!-- /react-text --><br></span><span><!-- react-text: 374 -->项目目录打开命令行运行 npm install ting.js --save<!-- /react-text --><br></span><span><!-- react-text: 377 --><!-- /react-text --><br></span></p>
+					<div></div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤3"><!-- react-text: 382 -->
 Step 3:　创建index.js<!-- /react-text -->
-<span style="color: rgb(255, 144, 0);"></span></h3><p>
-<span><!-- react-text: 386 -->入口文件<!-- /react-text --><br></span></p>
-<div class="code_view">
-<pre class=" line-numbers language-javascript">
+<span style="color: rgb(255, 144, 0);"></span></h3>
+					<p>
+						<span><!-- react-text: 386 -->入口文件<!-- /react-text --><br></span></p>
+					<div class="code_view">
+						<pre class=" line-numbers language-javascript">
 <code id="codeview_3" class=" language-javascript">
 		const path = require("path");
 		//引入express
@@ -55,10 +100,14 @@ Step 3:　创建index.js<!-- /react-text -->
 		});
 </code>
 </pre>
-</div></div>
-<div class="ta-content-path"><h3 id="jiaocheng步骤4"><!-- react-text: 393 -->Step 4:　创建routes.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 397 -->配置routes规则<!-- /react-text --><br></span></p><div class="code_view">
+					</div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤4"><!-- react-text: 393 -->Step 4:　创建routes.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3>
+					<p><span><!-- react-text: 397 -->配置routes规则<!-- /react-text --><br></span></p>
+					<div class="code_view">
 
-<pre class=" line-numbers language-javascript">
+						<pre class=" line-numbers language-javascript">
 <code id="codeview_4" class=" language-javascript">
 	//处理类
 	var Home = require("./home.class");
@@ -75,8 +124,13 @@ Step 3:　创建index.js<!-- /react-text -->
 </code>
 </pre>
 
-</div></div><div class="ta-content-path"><h3 id="jiaocheng步骤5"><!-- react-text: 404 -->Step 5:　创建home.class.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 408 -->替代复杂的router，使用类文件作为请求入口<!-- /react-text --><br></span></p><div class="code_view">
-<pre class=" line-numbers language-javascript">
+					</div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤5"><!-- react-text: 404 -->Step 5:　创建home.class.js<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3>
+					<p><span><!-- react-text: 408 -->替代复杂的router，使用类文件作为请求入口<!-- /react-text --><br></span></p>
+					<div class="code_view">
+						<pre class=" line-numbers language-javascript">
 <code id="codeview_5" class=" language-javascript">
 const rules = {   //对象
 	get:[	
@@ -100,11 +154,16 @@ Home.rules = rules;
 module.exports = Home;
 </code>
 </pre>
-</div></div>
-<div class="ta-content-path">
-<h3 id="jiaocheng步骤6"><!-- react-text: 415 -->Step 6:　运行测试<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3><p><span><!-- react-text: 419 -->项目目录打开命令行运行<!-- /react-text --><br></span><span><!-- react-text: 422 -->node index<!-- /react-text --><br></span><span><!-- react-text: 425 -->访问localhost:8090<!-- /react-text --><br></span><span><!-- react-text: 428 -->你可以看到类Home调用了getHome，顺利返回hello world<!-- /react-text --><br></span></p><div></div></div></div></div></div><div>
+					</div>
+				</div>
+				<div class="ta-content-path">
+					<h3 id="jiaocheng步骤6"><!-- react-text: 415 -->Step 6:　运行测试<!-- /react-text --><span style="color: rgb(255, 144, 0);"></span></h3>
+					<p><span><!-- react-text: 419 -->项目目录打开命令行运行<!-- /react-text --><br></span><span><!-- react-text: 422 -->node index<!-- /react-text --><br></span><span><!-- react-text: 425 -->访问localhost:8090<!-- /react-text --><br></span><span><!-- react-text: 428 -->你可以看到类Home调用了getHome，顺利返回hello world<!-- /react-text --><br></span></p>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
 
-</div>
-
-
-
+	</div>

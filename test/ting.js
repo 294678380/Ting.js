@@ -11,7 +11,7 @@ var routes_testfn = function(ting){
 }
 
 describe("ting.init from ting.js",function(){
-	var init_1 = function(){
+	let init_1 = function(){
 		ting.init({},_routes,opt);
 	}
 	it("ting.init 传入错误的app对象时",function(){
@@ -19,7 +19,7 @@ describe("ting.init from ting.js",function(){
 		.to.throw(Error);
 	});
 
-	var init_2 = function(){
+	let init_2 = function(){
 		ting.init(app,{},opt);
 	}
 	it("ting.init 传入错误的routes对象时",function(){
@@ -28,8 +28,8 @@ describe("ting.init from ting.js",function(){
 	})
 
 	
-	var init_3 = function(){
-		var returnObj = ting.init(app,routes_testfn,opt);
+	let init_3 = function(){
+		let returnObj = ting.init(app,routes_testfn,opt);
 		return returnObj.pages[0].class === "Test";
 	}
 	it("ting.init 传入正确的参数",function(){
@@ -44,25 +44,49 @@ describe("ting.use from ting.js",function(){
 		.to.be.an("function");
 	});
 
-	var use = function(){
-		var self = {   //我需要传入测试用的上下文app对象
+	let use = function(self){
+		let _ting_routes = ting.use.call(self); //返回了函数调用
+			if(self._opt.tfor === "koa"){
+				if(_ting_routes){
+					return true;
+				}
+				return false;
+			}else{
+				_ting_routes(_routes);		//调用测试
+				if(self.path == "/" && typeof(self.router) == "object"){
+					return true;
+				}
+				return false;
+			}
+	}
+	it("ting.use 传入_routes配置信息时，app.use应该生成对应的layer == 当模式为express时",function(){
+		expect(use({   //我需要传入测试用的上下文app对象
 			_app:{
 				use:function(path,router){
-					self.path = path;
-					self.router = router;
+					this.path = path;
+					this.router = router;
 				}
-			}, 
+			},
+			_opt:{
+				tfor:"express"  //express模式
+			},
 			doc:function(){}
-		}
-		var _ting_routes = ting.use.call(self); //返回了函数调用
-			_ting_routes(_routes);		//调用测试
-			if(self.path == "/" && typeof(self.router) == "object"){
-				return true;
-			}
-			return false;
-	}
-	it("ting.use 传入_routes配置信息时，app.use应该生成对应的layear",function(){
-		expect(use()).to.not.be.true;
+		})).to.not.be.true;
+	});
+	it("ting.use 传入_routes配置信息时，app.use应该生成对应的layer == 当模式为koa时",function(){
+		expect(use({   //我需要传入测试用的上下文app对象
+			_app:{
+				use:function(path,router){
+					this.path = path;
+					this.router = router;
+				}
+			},
+			_opt:{
+				tfor:"koa"  //express模式
+			},
+			koa_use:ting.koa_use.bind(ting),
+			doc:function(){}
+		})).to.be.true;
 	});
 });
 
@@ -73,13 +97,25 @@ describe("ting.routes from ting.js",function(){
 });
 
 
-describe("ting.doc from ting.js",function(){
-	var doc = function(){
+describe("ting.doc from the ting.js",function(){
+	let doc = function(){
 		var returnObj = ting.doc(_routes[0]);
 		return returnObj.class === "Test";
 	}
 	it("ting.doc 传入单个router 生成单个router的文档",function(){
 		expect(doc())
+		.to.be.true;
+	})
+});
+
+describe("ting.koa_transform_routes from the ting.js",function(){
+	let transform = function(){
+		var returnObj = ting.koa_transform_routes(_routes);
+
+		return returnObj[0].path === "/" && returnObj[0].method === "post";
+	}
+	it("传入正确的routes，返回生成后的适用于koa的router对象",function(){
+		expect(transform())
 		.to.be.true;
 	})
 });
