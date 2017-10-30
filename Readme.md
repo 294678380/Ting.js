@@ -1,4 +1,4 @@
-ting.js for 1.2.1
+ting.js for 2.0.2
 <a href="https://travis-ci.org/294678380/Ting.js"><img src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" alt="" data-canonical-src="https://api.travis-ci.org/294678380/Ting.js.svg?branch=master" style="max-width:100%;"></a>
 <a><img src='https://bettercodehub.com/edge/badge/294678380/Ting.js?branch=master' /></a>
 
